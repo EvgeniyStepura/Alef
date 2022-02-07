@@ -1,0 +1,63 @@
+
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+.header {
+	width:100%; 
+	padding:12px 0;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	.header_cont{display:flex; justify-content: space-between;}     
+}   
+.logo{font-size:22px; font-weight:700; text-transform: uppercase; align-items: flex-start;
+	.logo_link{text-decoration: none;}
+}
+.hedright{align-items: flex-end;  display:flex;
+	.login,.like,.basket{margin: 0 33px; font-size:12px;}
+	.basket{margin-right:0;}
+}
+/* */ 
+
+@media (max-width: 1279px) { 
+
+    
+}
+@media (max-width: 1023px) { 
+  
+
+}
+
+@media (max-width: 767px) { 
+
+
+}
+@media (max-height: 699px) {  
+    
+}
+@media (max-height: 574px) {  
+   
+}   
+@media (max-width: 520px) {  
+ 
+}
+@media (max-height: 499px) { 
+  
+}
+@media (max-width: 480px) {    
+ 
+}
+@media (max-width: 374px) {
+
+}
+@media (max-height: 499px) { 
+   
+
+}
+
+
+
+
+
+
+
