@@ -127,7 +127,6 @@ textarea.form-control {height: 90px; resize:none;}
 /*---------------------------------------*/ 
 .m-show {display: none;}
 .js-bg {background-size: cover; background-position: top; background-repeat: no-repeat;}   
-.bg-blue {background: #F0F2F6;}
 
 /*-----------------------------*/
 
@@ -159,6 +158,53 @@ textarea.form-control {height: 90px; resize:none;}
 	}
 	span {}
 }
+
+
+
+.card{display: flex;
+	&_slider{width:686px; max-width: 686px; position:relative;
+		&_big{width: 100%;  overflow: hidden; z-index: 0; position: relative;
+			&_item{width:100%; height:100%; position:relative;
+				&:before{content:''; display:block; padding-bottom:128%; }
+				&_img{position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items: center; justify-content: center;
+					img{object-fit: cover; position:absolute; top:0; left:0; width:100%; height:100%;}
+				}
+			}
+		}
+		&_prev{position:absolute; top:0; left:0; z-index: 1;
+			&_item{  position: relative; cursor: pointer; margin-bottom:7px;
+				&_img{width:70px;	 height:90px;  display:flex; align-items: center; justify-content: center; position: relative;
+					img{object-fit: cover; position:absolute; top:0; left:0; width:100%; height:100%;}
+				}
+			}
+			.slick-track{display:flex; flex-direction: column;}
+			.slick-list{padding:0 !important; }
+		}
+	}
+	&_des{padding-left:36px; 
+		h1{font-size:18px; font-weight:600; margin-bottom:8px; }
+		.review_line{margin-bottom:46px;}
+	}
+}
+.articl{color: #828282; letter-spacing: 0.04em; font-size: 12px; margin-bottom:18px;}
+.review_line{position:relative;     display: flex;  align-items: center;
+	
+}
+.arrow_link{position:relative; width:12px; height:12px; display:inline-block; overflow: hidden;
+	&:after{content:''; width:8px; height:1px; position: absolute; top:3px; right:0; background-color: #333; transform: rotate(50deg);}
+	&:before{content:''; width:8px; height:1px; position: absolute; bottom:3px; right:0; background-color: #333; transform: rotate(-50deg);}
+}
+.review_stras{font-size: 10px; margin:0 5px;}
+.price{font-size:24px; letter-spacing: 0.04em;	text-transform: uppercase; font-weight:bold; display:flex; align-items: center; position: relative; margin-bottom:10px; 
+	&_old{color:#828282; letter-spacing: 0.04em; font-size:14px; text-decoration-line: line-through; margin: 0 0 0 12px;}
+}
+.discont{display:flex; margin-bottom:40px;
+	&_block{border: 1px solid #333333; margin-right:4px; display:flex; align-items: center ; justify-content: center; padding:0 8px; font-size:14px; letter-spacing: 0.04em;}
+}
+.size{}
+.size_choise{}
+
+
 
 
 
