@@ -14,7 +14,7 @@
 	.header_cont{display:flex; justify-content: space-between;}     
 }   
 .logo{font-size:22px; font-weight:700; text-transform: uppercase; align-items: flex-start;
-	.logo_link{text-decoration: none;}
+	.logo_link{text-decoration: none; border:none;}
 }
 .hedright{align-items: flex-end;  display:flex;
 	.login,.like,.basket{margin: 0 33px; font-size:12px;}

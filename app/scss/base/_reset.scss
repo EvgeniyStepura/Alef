@@ -79,13 +79,13 @@ form {
 	margin: 0px;
 }
 
-a {
+a, button {
 	color: $link-color;
 	@include transition($default-transition);
 	text-decoration: none;
 	outline: none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);   
-	&:hover {text-decoration:none; color:#333333;}      
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+	&:hover {text-decoration:none; color:#333333; }      
 }
 
 a,

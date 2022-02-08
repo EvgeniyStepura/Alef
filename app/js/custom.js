@@ -64,6 +64,27 @@ $(window).on('load',function(){
     focusOnSelect: true
   });
 
+  $('.numb').each(function() {  
+	  var asd = $(this);  
+	  asd.find('span.minus').click(function() {
+	   var data = asd.find('input').val();
+	   if(data > 0) {
+		asd.find('input').val(parseInt(data) - 1);
+	   }
+	   return false
+	  });  
+	  asd.find('span.plus').click(function() {
+	   var data = asd.find('input').val();
+	   asd.find('input').val(parseInt(data) + 1);
+	   return false
+	  });	  
+  });
+
+  $('.like_link').click(function(){
+    $(this).toggleClass('active');
+
+  });
+
   function fancyboxFunc() {
     if ($('.fancybox').length) {
       $('.fancybox').fancybox({
