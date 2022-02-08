@@ -25,20 +25,14 @@ $(window).on('load',function(){
     $(".js-img").each(function () {
         $(this).attr('src', $(this).data("src"));
     });
-    $("head").append( '<link rel="preload stylesheet" href="css/slick.css" as="style">' );
-    $("head").append( '<link rel="preload stylesheet" href="css/fancybox.css" as="style">' );
     $("head").append( '<link rel="preload stylesheet" href="css/style.css" as="style">' );
   },1000);
 
   setTimeout(function() {
     $("head").append( '<link rel="preload stylesheet" href="css/fonts.css" as="style">' );
     
-    loadJS('js/components/jquery.fancybox.js',fancyboxFunc, document.body);
     loadJS('js/components/jquery.formstyler.js',selectFunc, document.body);
-    loadJS('js/components/jquery.validate.min.js',validateInput, document.body);
 
-
-    
   }, 1300);
   
     
@@ -85,54 +79,25 @@ $(window).on('load',function(){
 
   });
 
-  function fancyboxFunc() {
-    if ($('.fancybox').length) {
-      $('.fancybox').fancybox({
-        closeExisting: true,
-        touch: false,
-        smallBtn: true,
-      });
-    }
-  }
   function selectFunc() {
     if ($('select').length) {
       $('select').styler();
     }
   }
-  function validateInput() {  
-    jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
-          phone_number = phone_number.replace(/\s+/g, "");
-          return this.optional(element) || phone_number.length > 9 && 
-          phone_number.match(/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/);
-        }, "Введите Ваш телефон");
-    $("#form").validate({
-      rules: {
-        name: {
-          required: true
-        },
-        tel: {
-          required: true,
-          phoneUS: true,
-          number: true
-        },
-        comment: {
-          required: true,
-        }
-      },        
-      messages: {
-          name: "Введите Ваше имя",  
-          tel: {
-            required: "Введите Ваш телефон",
-          },
-          comment: "Введите Ваш комментарий", 
-      },
-      submitHandler: function (form) {
-        $('#winok').trigger('click');
-      }
-    });
-  }
 
- 
+
+  $("#form").validate({
+    rules: {
+      email: {
+        required: true
+      },
+    },        
+    messages: {
+        email: "Введите Ваш email",  
+    }, 
+  });
+
+  
 
 });
 /* viewport width */

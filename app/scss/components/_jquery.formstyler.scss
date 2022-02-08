@@ -27,8 +27,8 @@ $select-bg: #fff;
 $select-border-color: #333333;
 $select-border-width: 1px;  
 $select-border-radius: 0px;
-$select-height: 35px;
-$select-padding:5px 30px 5px 30px;    
+$select-height: 44px;
+$select-padding:8px 30px 8px 15px;    
 $select-line-height: 25px;
 $select-color: #333333;
 
@@ -149,7 +149,8 @@ $dropdown-item-disbled-bg:none;
 	color: #333; 
 	z-index: 1;
 	font-family:$base-font-family;
-	font-size:14px;   
+	font-size:14px; 
+	letter-spacing: 0.6px;  
 } 
 
 .jq-selectbox select {display: none;}
@@ -184,14 +185,14 @@ $dropdown-item-disbled-bg:none;
     font-variant: normal;
     text-transform: none;
     line-height: 1;font-size: 7px;
-	&:before {position:absolute; top:16px; right:10px; width:10px; height:1px; transform: rotate(45deg); content:''; background-color: #333333;}
-	&:after {position:absolute; top:16px; right:3px; width:10px; height:1px; transform: rotate(-45deg); content:''; background-color: #333333;}
+	background: url(../svg/arr.svg) no-repeat center;
+	transform: rotate(90deg);
 }
 
-.jq-selectbox.opened .jq-selectbox__trigger-arrow {   	transform: rotate(180deg);}
+.jq-selectbox.opened .jq-selectbox__trigger-arrow {   	transform: rotate(-90deg);}
 .jq-selectbox.disabled .jq-selectbox__trigger-arrow {}
 .jq-selectbox__dropdown {   
-	top: 35px !important; bottom:auto;
+	top: 46px !important; bottom:auto;
 	width: 100%;
 	box-sizing: border-box;   
 	border: $dropdown-border-width solid $dropdown-border-color;

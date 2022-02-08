@@ -51,7 +51,13 @@ html {
 	-webkit-text-size-adjust: none;
 	-ms-text-size-adjust: none;
 }
-
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    background-color: transparent;
+    outline: none;
+}
 input,
 textarea {
 	color: #333;
@@ -82,12 +88,11 @@ form {
 a, button {
 	color: $link-color;
 	@include transition($default-transition);
-	text-decoration: none;
+	text-decoration: underline;
 	outline: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
 	&:hover {text-decoration:none; color:#333333; }      
 }
-
 a,
 span,
 div,

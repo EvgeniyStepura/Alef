@@ -4,15 +4,15 @@
     order: 3;	
     -webkit-order: 3;	
     z-index: 10;
-    padding: 70px 0 70px 0px;
-    h4{text-transform: uppercase; margin-bottom:16px;}
+    padding: 145px 0 70px 0px;
+    h4{text-transform: uppercase; margin-bottom:6px; letter-spacing: 0.023em;}
 }
-.footer_cont{display:flex; justify-content: space-between;}
-.footer_inf{display:flex; width:50%;
+.footer_cont{display:flex; justify-content: space-between;     max-width: 1153px; margin:0 auto;}
+.footer_inf{display:flex;     width: 60.7%;
     &_col{width: 50%;}
     ul{
-        li{list-style: none; margin-bottom:8px;
-            a{font-size: 14px; position:relative; 
+        li{list-style: none; margin-bottom:11px;
+            a{font-size: 14px; position:relative;  letter-spacing: 0.04em; text-decoration: none;
                 &:after{width:0; background-color: #333333; height:1px; content:''; position: absolute; left: 0; bottom:0; transition: all 0.3s ease-out;}
                 &:hover{ 
                     &:after{width:100%;}
@@ -22,20 +22,24 @@
     }
     
 }
-.t-inp_close{display:block; position:absolute; top:50%; right:0; margin-top:-4.5px; width:9px; height:9px; overflow: hidden;
-    &:after{position:absolute; top:50%; left:0; transform: rotate(45deg); background: #C4C4C4; content:''; display:block; width:9px; height:1px;}
-    &:before{position:absolute; top:50%; left:0; transform: rotate(-45deg); background: #C4C4C4; content:''; display:block; width:9px;  height:1px;}
+
+.t-inp_close{display:block; position:absolute; top:50%; right:11px; margin-top:-6px; width:11px; height:11px; overflow: hidden;
+    &:after{position:absolute; top:50%; left:0; transform: rotate(45deg); background: #C4C4C4; content:''; display:block; width:11px; height:1px;}
+    &:before{position:absolute; top:50%; left:0; transform: rotate(-45deg); background: #C4C4C4; content:''; display:block; width:11px;  height:1px;}
 }
-.footer_new{
-    .fnew_form{    display: flex;  flex-direction: column;  align-items: flex-end;
+.footer_new{width: 39.3%;
+    .fnew_form{    display: flex;  flex-direction: column;  align-items: flex-end; position: relative;     padding-top: 18px;
         &_inp{position:relative; border-bottom: 1px solid #C4C4C4; width: 100%; margin-bottom: 35px;}
-        .t-inp{width:100%; height:40px; border:none; outline: none; color:#333; font-size:14px;  background: transparent; }
+        .t-inp{width:100%; height:40px; border:none; outline: none; color:#333; font-size:14px;  background: transparent; padding: 0 34px 0 17px;    letter-spacing: 0.04em;}
         .t-inp::-webkit-input-placeholder {color:rgba(40,40,40,0.6);}
         .t-inp:-moz-placeholder {color:rgba(130,130,130,1);}      
         .t-inp::-moz-placeholder {color:rgba(130,130,130,1);}
         .t-inp:-ms-input-placeholder {color:rgba(130,130,130,1);}  
+        .error{border-bottom: 1px solid #FF3333;}
+        span.error{      color: #FF3333;  position: absolute;   left: 0;   border: none;  top: -20px;}
+        .valid{background: transparent;}
     }
-   .form_submit{background: #FFFFFF; border: 1px solid #333333; width: 150px;  height: 36px; font-size: 14px; text-align: center; line-height: 36px; padding:0;transition: all 0.3s ease-out;
+   .form_submit{background: #FFFFFF; border: 1px solid #333333;     letter-spacing: 0.04em; width: 150px;  height: 36px; font-size: 14px; text-align: center; line-height: 36px; padding:0;transition: all 0.3s ease-out;
     &:hover{color:#fff; background-color: #333333; }
 }
 }
